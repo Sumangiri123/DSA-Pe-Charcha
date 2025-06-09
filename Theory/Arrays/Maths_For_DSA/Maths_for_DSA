@@ -1,0 +1,159 @@
+# Prime numbers
+
+If no factors between 2 to sqrt(n)
+
+# Finding Prime numbers in a range 
+
+Leet Code Problem 204 -- Using Sieve of Eratosthenes
+
+# Digits in a Number
+
+Extracting digits using n % 10 until n == 0
+
+# Armstrong Number
+
+Number equal to the sum of cubes of its digits
+
+# GCD - 
+
+1) Brute Force Logic - O(min(a,b))
+2) Euclid's Algo - Optimised Approach -- O(log()min(a,b))
+
+# LCM - Lowest common Multlple
+
+Find gcd(a,b) then find lcm(a,b) = a * b / gcd(a,b)
+
+# Reverse a Number --
+
+Extract one digit at a time -- revnum += (revnum*10) + digit
+
+Leetcode Problem 7
+
+# Palindromic Number 
+
+Reverse of a number == Number 
+
+Leetcode Problem No. 9
+
+# Modulo Arithmetics
+
+Leetcode Problem No. 850
+
+if Ans. May be very Large so return ans % 10^7 + 9
+
+# Modulo Properties
+
+1) (x+y)%m = x%m + y%m
+
+2) (x-y)%m = x%m - y%m
+
+3) (x.y%m) = x%m.y%m
+
+4) ((x % m)%m)%m = x%m
+
+# Count of Digits - 
+
+int(log n + 1) - Number of Digits in a number
+
+If the number of iterations is depended on divisions then time complexity is log n (base depends on the number which the original number gets divided)
+
+# Finding all Divisors 
+
+For a number n --
+
+Iterate 1 to sqrt(n) -- if n % i == 0 then 
+    t i is one factor and n/i is another factor but make sure its not equal to i
+
+Time Complexity - O(sqrt(n))
+
+# Bit Manipulation
+
+Everything is Stored in computer in the form of 0s and 1s
+
+There are diffirent number system we deal with but mostly we use deal with decimal number System 
+
+Follow Resource 3 
+
+1) AND Operator(&)
+When you and with any number , digits remain the same 
+2) OR Operator(|)
+3) XOR Operator(^) 
+a^1 = ~a ; a^0 = a ; a^a =  0
+4) Left Shift Operator -- addition of Os at end by left doing left shift first
+a<<b = a * 2^b
+5) Right Shift Operator -- Elimination of bits bu doing right shift 
+a>>b = a / 2^b
+6) Number System Conversion
+    i) Decimal to some base b  -- Division by that base number
+    ii) Some base to decimal -- Multiplcation by base to the power of exponent
+    iii) Some base a to another base b -- use the above two rules to get desired results
+Q.1) Given a Number check if odd or even 
+    Last bit(lsp - least significant bit) of a number is 1 -- odd if 0 -- even
+    we use and operator with 1 to extract the last bit 
+Q.2) In a array only one number appearing once and others appearing twice
+    XOR all the numbers to find the unique numbers 
+
+Q.3) Find ith bit of a no. 
+    Doing & with 1<<(i-1)
+
+Q.4) Set the ith bit to 1
+    Doing OR with 1<<(i-1)
+
+Q.5) Reset the ith bit to 0
+    Doing & with ~(1<<(i-1))
+
+Q.6) Find the position rightmost set Bit i.e. the first bit from the right hand side 
+
+    N = a 1 b
+  -N = ~a 1 b(how ?) a = random bits ; b = O bits
+    N & (-N) = RIght most 1 bit
+
+7) Negative of a number in binary form 
+
+1 byte = 8 bits 
+
+10 => Tells us if no. is postive or negative its a reserved bit specially first bit and rest bit represent the value of a number 1(-ve) and 0(+ve) -- (MSB)|0|0|0|0|1|0|1|0|(LSB) -- Tells Number is odd or even 
+
+Steps : Take the complement of number then add 1 to it (2's Complement Method)
+
+Why this? 
+
+8) How to numbers can be stored in a 1 byte
+
+Range Formula for n bits : -2^(n-1) to 2^(n-1)-1
+
+9) How to find the numbers that appearing once in a array where others are appearing odd number of times then how do you find the unique numbers.
+
+Adding all the set bits of duplicate numbers and doing modulo 3 we get remainder 0 but adding set bits of unique number and doing modulo 3 we get the unique number as remainder in the binary form.
+
+10) Find the nth Magic Number
+
+1st Magic Number - Write 1 in binary then raise powers of 5 to get the first magic number 
+
+2nd Magic Number - Write 2 in binary and raise to the powers of 5 
+
+nth magic number --
+
+n & 1 -- lsb then lsb*5^0 thrn n>>1 & 1 to get next digit * 5^1 and goes on till n>0
+
+11) Find number of digits in base b 
+
+Do Right shift 1 and increase count by 1 till the number > 0 
+
+Do int(log number to that base) + 1 to get the number of digits of that number in the base 
+
+# Explore - 
+
+1) Power Exponentiation
+2) Catalan Number(Used to solve DP Problems)
+3) Trialing Zeroes
+
+
+# Resources --
+
+1) Maths for DSA - One Shot(Apna College) -- https://www.youtube.com/watch?v=Y4KdgqV1IqA&t=158s
+
+2) Basic Maths for DSA(take U Forward) - https://www.youtube.com/watch?v=1xNbjMdbjug&t=136s
+
+3) Bitwise Operators + Number Systems - Maths for DSA(Kunal Kushwaha) - https://www.youtube.com/watch?v=fzip9Aml6og&t=6484s
+
