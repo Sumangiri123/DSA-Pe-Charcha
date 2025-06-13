@@ -148,7 +148,7 @@ class Solution:
 
 
 
-#####   49. Group Anagrams   #####
+#####   27. Remove Element   #####
 
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
