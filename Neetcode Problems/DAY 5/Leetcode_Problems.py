@@ -161,21 +161,3 @@ class Solution:
                 
 # Time Complexity -- O(n)
 # Space Complexity -- O(1)
-
-
-
-#####   27. Remove Element   #####
-
-#
-
-
-
-#####   705. Design HashSet   #####
-
-#
-
-
-
-#####   706. Design HashMap   #####
-
-#
