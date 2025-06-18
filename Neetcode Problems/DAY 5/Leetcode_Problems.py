@@ -85,7 +85,7 @@ class Solution:
 
 
 
-#####   912. Sort an Array   #####
+#####   169. Majority Element   #####
 
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
